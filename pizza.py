@@ -1,3 +1,7 @@
+#Riyadh Ahmed - 301068729
+#Jan 24 2024
+
+
 class Pizza:
     valid_sizes = ["small","medium","large"]
     prices = {
@@ -28,6 +32,7 @@ def __str__(self):
     
     @property
     def priceofPizza(price):
+
         return price
     
     @property 
@@ -35,3 +40,10 @@ def __str__(self):
         return size
       
         
+    @property
+    def size_setter(self,valid_sizes):
+        try:
+            if valid_sizes == 'gigantic':
+                raise Exception('invalid size')
+        except Exception as e:
+            print(e)
